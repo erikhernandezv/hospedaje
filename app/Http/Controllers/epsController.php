@@ -58,7 +58,7 @@ class epsController extends AppBaseController
 
         $eps = $this->epsRepository->create($input);
 
-        Flash::success('Eps saved successfully.');
+        Flash::success('Datos de la Eps almacenados correctamente');
 
         return redirect(route('eps.index'));
     }
@@ -75,7 +75,7 @@ class epsController extends AppBaseController
         $eps = $this->epsRepository->find($id);
 
         if (empty($eps)) {
-            Flash::error('Eps not found');
+            Flash::error('Datos para la Eps no encontrados');
 
             return redirect(route('eps.index'));
         }
@@ -95,7 +95,7 @@ class epsController extends AppBaseController
         $eps = $this->epsRepository->find($id);
 
         if (empty($eps)) {
-            Flash::error('Eps not found');
+            Flash::error('Datos para la Eps no encontrados');
 
             return redirect(route('eps.index'));
         }
@@ -116,14 +116,14 @@ class epsController extends AppBaseController
         $eps = $this->epsRepository->find($id);
 
         if (empty($eps)) {
-            Flash::error('Eps not found');
+            Flash::error('Datos para la Eps no encontrados');
 
             return redirect(route('eps.index'));
         }
 
         $eps = $this->epsRepository->update($request->all(), $id);
 
-        Flash::success('Eps updated successfully.');
+        Flash::success('Datos actualizados correctamente para la Eps.');
 
         return redirect(route('eps.index'));
     }
@@ -142,14 +142,14 @@ class epsController extends AppBaseController
         $eps = $this->epsRepository->find($id);
 
         if (empty($eps)) {
-            Flash::error('Eps not found');
+            Flash::error('Datos para la Eps no encontrados');
 
             return redirect(route('eps.index'));
         }
 
         $this->epsRepository->delete($id);
 
-        Flash::success('Eps deleted successfully.');
+        Flash::success('Datos de la eps eliminados correctamente.');
 
         return redirect(route('eps.index'));
     }

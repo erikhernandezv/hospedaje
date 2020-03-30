@@ -58,7 +58,7 @@ class dotacionController extends AppBaseController
 
         $dotacion = $this->dotacionRepository->create($input);
 
-        Flash::success('Dotacion saved successfully.');
+        Flash::success('Se almacenó la información de dotaciones para el hospedaje.');
 
         return redirect(route('dotacions.index'));
     }
@@ -75,7 +75,7 @@ class dotacionController extends AppBaseController
         $dotacion = $this->dotacionRepository->find($id);
 
         if (empty($dotacion)) {
-            Flash::error('Dotacion not found');
+            Flash::error('No se encontró la dotación');
 
             return redirect(route('dotacions.index'));
         }
@@ -95,7 +95,7 @@ class dotacionController extends AppBaseController
         $dotacion = $this->dotacionRepository->find($id);
 
         if (empty($dotacion)) {
-            Flash::error('Dotacion not found');
+            Flash::error('o se encontró la dotación');
 
             return redirect(route('dotacions.index'));
         }
@@ -116,14 +116,14 @@ class dotacionController extends AppBaseController
         $dotacion = $this->dotacionRepository->find($id);
 
         if (empty($dotacion)) {
-            Flash::error('Dotacion not found');
+            Flash::error('No se encontró la dotación');
 
             return redirect(route('dotacions.index'));
         }
 
         $dotacion = $this->dotacionRepository->update($request->all(), $id);
 
-        Flash::success('Dotacion updated successfully.');
+        Flash::success('Se actualizó la información de la dotacion para el hospedaje.');
 
         return redirect(route('dotacions.index'));
     }
@@ -142,14 +142,14 @@ class dotacionController extends AppBaseController
         $dotacion = $this->dotacionRepository->find($id);
 
         if (empty($dotacion)) {
-            Flash::error('Dotacion not found');
+            Flash::error('No se encontró la dotación');
 
             return redirect(route('dotacions.index'));
         }
 
         $this->dotacionRepository->delete($id);
 
-        Flash::success('Dotacion deleted successfully.');
+        Flash::success('Se eliminó la información de la dotación para el hospedaje');
 
         return redirect(route('dotacions.index'));
     }

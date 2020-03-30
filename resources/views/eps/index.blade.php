@@ -5,7 +5,7 @@ Eps
 @endsection
 
 @section('titulosecundario')
-Eps
+Nuevas Eps
 @endsection
 
 @section('add')

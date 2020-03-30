@@ -27,4 +27,20 @@ class CreatevehiculosRequest extends FormRequest
     {
         return vehiculos::$rules;
     }
+
+    /**
+     * Convierte los valores de los inputs en mayusculas
+     *
+     * @return array
+     */
+    public function all($keys = null) {
+        $attributes = parent::all();
+        $attributes = array_map(function($item) {
+            if(!is_array($item)){
+                return strtoupper($item);
+            }
+        }, $attributes);
+        return $attributes;
+    }
+
 }

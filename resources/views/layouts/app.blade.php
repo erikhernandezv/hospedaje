@@ -196,60 +196,97 @@
                 <li class=" nav-item"><a href="#"><i class="la la-columns"></i><span class="menu-title" data-i18n="nav.page_layouts.main">Dotaciones</span></a>
                     <ul class="menu-content">
                         @if(auth()->user()->can('usuarios_create') || auth()->user()->hasRole(config('seguridad.rol_admin')))
-                            <li><a class="menu-item" href="{{ route('register') }}" data-i18n="nav.page_layouts.1_column">Dotaciones</a>
+                            <li><a class="menu-item" href="{{ route('dotacions.create') }}" data-i18n="nav.page_layouts.1_column">Ingresar</a>
+                            </li>
+                        @endif
+                    </ul>
+                    <ul class="menu-content">
+                        @if(auth()->user()->can('usuarios_create') || auth()->user()->hasRole(config('seguridad.rol_admin')))
+                            <li><a class="menu-item" href="{{ route('dotacions.index') }}" data-i18n="nav.page_layouts.1_column">Consultar</a>
                             </li>
                         @endif
                     </ul>
                 </li>
                 <li class=" nav-item"><a href="#"><i class="la la-columns"></i><span class="menu-title" data-i18n="nav.page_layouts.main">Eps</span></a>
                     <ul class="menu-content">
-                        @if(auth()->user()->can('usuarios_search') || auth()->user()->hasRole(config('seguridad.rol_admin')))
-                            <li><a class="menu-item" href="{{ route('users.index') }}" data-i18n="nav.page_layouts.2_columns">Eps</a>
+                        @if(auth()->user()->can('usuarios_create') || auth()->user()->hasRole(config('seguridad.rol_admin')))
+                            <li><a class="menu-item" href="{{ route('eps.create') }}" data-i18n="nav.page_layouts.1_column">Ingresar</a>
                             </li>
                         @endif
-                        </ul>
+                    </ul>
+                    <ul class="menu-content">
+                        @if(auth()->user()->can('usuarios_create') || auth()->user()->hasRole(config('seguridad.rol_admin')))
+                            <li><a class="menu-item" href="{{ route('eps.index') }}" data-i18n="nav.page_layouts.1_column">Consultar</a>
+                            </li>
+                        @endif
+                    </ul>
                 </li>
                 <li class=" nav-item"><a href="#"><i class="la la-columns"></i><span class="menu-title" data-i18n="nav.page_layouts.main">Equipos</span></a>
                     <ul class="menu-content">
                         @if(auth()->user()->can('usuarios_create') || auth()->user()->hasRole(config('seguridad.rol_admin')))
-                            <li><a class="menu-item" href="{{ route('register') }}" data-i18n="nav.page_layouts.1_column">Equipos</a>
+                            <li><a class="menu-item" href="{{ route('register') }}" data-i18n="nav.page_layouts.1_column">Ingresar</a>
                             </li>
                         @endif
-                        </ul>
+                    </ul>
+                    <ul class="menu-content">
+                        @if(auth()->user()->can('usuarios_create') || auth()->user()->hasRole(config('seguridad.rol_admin')))
+                            <li><a class="menu-item" href="{{ route('register') }}" data-i18n="nav.page_layouts.1_column">Consultar</a>
+                            </li>
+                        @endif
+                    </ul>
                 </li>
                 <li class=" nav-item"><a href="#"><i class="la la-columns"></i><span class="menu-title" data-i18n="nav.page_layouts.main">Personas</span></a>
                     <ul class="menu-content">
-                        @if(auth()->user()->can('usuarios_search') || auth()->user()->hasRole(config('seguridad.rol_admin')))
-                            <li><a class="menu-item" href="{{ route('users.index') }}" data-i18n="nav.page_layouts.2_columns">Personas</a>
+                        @if(auth()->user()->can('usuarios_create') || auth()->user()->hasRole(config('seguridad.rol_admin')))
+                            <li><a class="menu-item" href="{{ route('register') }}" data-i18n="nav.page_layouts.1_column">Ingresar</a>
                             </li>
                         @endif
-                        </ul>
+                    </ul>
+                    <ul class="menu-content">
+                        @if(auth()->user()->can('usuarios_create') || auth()->user()->hasRole(config('seguridad.rol_admin')))
+                            <li><a class="menu-item" href="{{ route('register') }}" data-i18n="nav.page_layouts.1_column">Consultar</a>
+                            </li>
+                        @endif
+                    </ul>
                 </li>
                 <li class=" nav-item"><a href="#"><i class="la la-columns"></i><span class="menu-title" data-i18n="nav.page_layouts.main">Servicios</span></a>
                     <ul class="menu-content">
                         @if(auth()->user()->can('usuarios_create') || auth()->user()->hasRole(config('seguridad.rol_admin')))
-                            <li><a class="menu-item" href="{{ route('register') }}" data-i18n="nav.page_layouts.1_column">Servicios</a>
+                            <li><a class="menu-item" href="{{ route('register') }}" data-i18n="nav.page_layouts.1_column">Ingresar</a>
                             </li>
                         @endif
-                        </ul>
+                    </ul>
+                    <ul class="menu-content">
+                        @if(auth()->user()->can('usuarios_create') || auth()->user()->hasRole(config('seguridad.rol_admin')))
+                            <li><a class="menu-item" href="{{ route('register') }}" data-i18n="nav.page_layouts.1_column">Consultar</a>
+                            </li>
+                        @endif
+                    </ul>
                 </li>
                 <li class=" nav-item"><a href="#"><i class="la la-columns"></i><span class="menu-title" data-i18n="nav.page_layouts.main">Vehiculos</span></a>
                     <ul class="menu-content">
-                        @if(auth()->user()->can('usuarios_search') || auth()->user()->hasRole(config('seguridad.rol_admin')))
-                            <li><a class="menu-item" href="{{ route('users.index') }}" data-i18n="nav.page_layouts.2_columns">Vehiculos</a>
+                        @if(auth()->user()->can('usuarios_create') || auth()->user()->hasRole(config('seguridad.rol_admin')))
+                            <li><a class="menu-item" href="{{ route('register') }}" data-i18n="nav.page_layouts.1_column">Ingresar</a>
+                            </li>
+                        @endif
+                    </ul>
+                    <ul class="menu-content">
+                        @if(auth()->user()->can('usuarios_create') || auth()->user()->hasRole(config('seguridad.rol_admin')))
+                            <li><a class="menu-item" href="{{ route('register') }}" data-i18n="nav.page_layouts.1_column">Consultar</a>
                             </li>
                         @endif
                     </ul>
                 </li>
             @endif
             </ul>
+            
             <!-- Menú para las opciones de Operación o Logica del negocio del sistema de información -->
             <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
             @if(auth()->user()->can('usuarios') || auth()->user()->hasRole(config('seguridad.rol_admin')))
                 <li class=" navigation-header">
                     <span data-i18n="nav.category.layouts">Operación</span><i class="la la-ellipsis-h ft-minus" data-toggle="tooltip" data-placement="right" data-original-title="Layouts"></i>
                 </li>
-                <li class=" nav-item"><a href="#"><i class="la la-columns"></i><span class="menu-title" data-i18n="nav.page_layouts.main">Datos Básicos</span></a>
+                <li class=" nav-item"><a href="#"><i class="la la-columns"></i><span class="menu-title" data-i18n="nav.page_layouts.main">Ingreso al hospedaje</span></a>
                     <ul class="menu-content">
                     @if(auth()->user()->can('usuarios_create') || auth()->user()->hasRole(config('seguridad.rol_admin')))
                         <li><a class="menu-item" href="{{ route('register') }}" data-i18n="nav.page_layouts.1_column">Registrar usuarios</a>
@@ -261,6 +298,59 @@
                     @endif
                     </ul>
                 </li>
+
+                <li class=" nav-item"><a href="#"><i class="la la-columns"></i><span class="menu-title" data-i18n="nav.page_layouts.main">Alimentación</span></a>
+                    <ul class="menu-content">
+                    @if(auth()->user()->can('usuarios_create') || auth()->user()->hasRole(config('seguridad.rol_admin')))
+                        <li><a class="menu-item" href="{{ route('register') }}" data-i18n="nav.page_layouts.1_column">Registrar usuarios</a>
+                        </li>
+                    @endif
+                    @if(auth()->user()->can('usuarios_search') || auth()->user()->hasRole(config('seguridad.rol_admin')))
+                        <li><a class="menu-item" href="{{ route('users.index') }}" data-i18n="nav.page_layouts.2_columns">Consultar usuarios</a>
+                        </li>
+                    @endif
+                    </ul>
+                </li>
+
+                <li class=" nav-item"><a href="#"><i class="la la-columns"></i><span class="menu-title" data-i18n="nav.page_layouts.main">Caja Menor</span></a>
+                    <ul class="menu-content">
+                    @if(auth()->user()->can('usuarios_create') || auth()->user()->hasRole(config('seguridad.rol_admin')))
+                        <li><a class="menu-item" href="{{ route('register') }}" data-i18n="nav.page_layouts.1_column">Registrar usuarios</a>
+                        </li>
+                    @endif
+                    @if(auth()->user()->can('usuarios_search') || auth()->user()->hasRole(config('seguridad.rol_admin')))
+                        <li><a class="menu-item" href="{{ route('users.index') }}" data-i18n="nav.page_layouts.2_columns">Consultar usuarios</a>
+                        </li>
+                    @endif
+                    </ul>
+                </li>
+
+                <li class=" nav-item"><a href="#"><i class="la la-columns"></i><span class="menu-title" data-i18n="nav.page_layouts.main">Mantenimiento de Equipos</span></a>
+                    <ul class="menu-content">
+                    @if(auth()->user()->can('usuarios_create') || auth()->user()->hasRole(config('seguridad.rol_admin')))
+                        <li><a class="menu-item" href="{{ route('register') }}" data-i18n="nav.page_layouts.1_column">Registrar usuarios</a>
+                        </li>
+                    @endif
+                    @if(auth()->user()->can('usuarios_search') || auth()->user()->hasRole(config('seguridad.rol_admin')))
+                        <li><a class="menu-item" href="{{ route('users.index') }}" data-i18n="nav.page_layouts.2_columns">Consultar usuarios</a>
+                        </li>
+                    @endif
+                    </ul>
+                </li>
+
+                <li class=" nav-item"><a href="#"><i class="la la-columns"></i><span class="menu-title" data-i18n="nav.page_layouts.main">Revisión de vehiculos</span></a>
+                    <ul class="menu-content">
+                    @if(auth()->user()->can('usuarios_create') || auth()->user()->hasRole(config('seguridad.rol_admin')))
+                        <li><a class="menu-item" href="{{ route('register') }}" data-i18n="nav.page_layouts.1_column">Registrar usuarios</a>
+                        </li>
+                    @endif
+                    @if(auth()->user()->can('usuarios_search') || auth()->user()->hasRole(config('seguridad.rol_admin')))
+                        <li><a class="menu-item" href="{{ route('users.index') }}" data-i18n="nav.page_layouts.2_columns">Consultar usuarios</a>
+                        </li>
+                    @endif
+                    </ul>
+                </li>
+
             @endif
             </ul>
 

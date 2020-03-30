@@ -10,14 +10,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @package App\Models
  * @version March 27, 2020, 9:29 pm UTC
  *
- * @property \Illuminate\Database\Eloquent\Collection 
- * @property \Illuminate\Database\Eloquent\Collection 
- * @property \Illuminate\Database\Eloquent\Collection 
- * @property \Illuminate\Database\Eloquent\Collection 
- * @property \Illuminate\Database\Eloquent\Collection 
- * @property \Illuminate\Database\Eloquent\Collection ingresos
- * @property \Illuminate\Database\Eloquent\Collection 
- * @property \Illuminate\Database\Eloquent\Collection 
  * @property string dot_detalle
  * @property float dot_valorperdidadano
  */
@@ -26,18 +18,15 @@ class dotacion extends Model
     use SoftDeletes;
 
     public $table = 'dotacion';
-    
-    const CREATED_AT = 'created_at';
-    const UPDATED_AT = 'updated_at';
+    protected $dateFormat = 'H:i:s';
 
-
-    protected $dates = ['deleted_at'];
+    protected $dates = ['deleted_at','created_at', 'updated_at',];
 
     protected $primaryKey = 'dot_consecutivo';
 
     public $fillable = [
         'dot_detalle',
-        'dot_valorperdidadano'
+        'dot_valorperdidadano',
     ];
 
     /**
@@ -46,9 +35,8 @@ class dotacion extends Model
      * @var array
      */
     protected $casts = [
-        'dot_consecutivo' => 'integer',
         'dot_detalle' => 'string',
-        'dot_valorperdidadano' => 'float'
+        'dot_valorperdidadano' => 'float',
     ];
 
     /**
@@ -57,11 +45,8 @@ class dotacion extends Model
      * @var array
      */
     public static $rules = [
-        'dot_consecutivo' => 'required',
-        'dot_detalle' => 'required',
-        'dot_valorperdidadano' => 'required',
-        'created_at' => 'required',
-        'updated_at' => 'required'
+        /*'dot_detalle' => 'required|max:255|unique:dotacion,dot_detalle,NULL,dot_consecutivo,deleted_at,NULL',
+        'dot_valorperdidadano' => 'required|numeric|min:0|max:10000000',*/
     ];
 
     /**

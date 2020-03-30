@@ -17,10 +17,10 @@ class eps extends Model
     use SoftDeletes;
 
     public $table = 'eps';
-    
+    //protected $dateFormat = 'H:i:s';
+
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
-
 
     protected $dates = ['deleted_at'];
 
@@ -36,7 +36,6 @@ class eps extends Model
      * @var array
      */
     protected $casts = [
-        'eps_consecutivo' => 'integer',
         'eps_nombre' => 'string'
     ];
 
@@ -46,10 +45,7 @@ class eps extends Model
      * @var array
      */
     public static $rules = [
-        'eps_consecutivo' => 'required',
-        'eps_nombre' => 'required',
-        'created_at' => 'required',
-        'updated_at' => 'required'
+        //'eps_nombre' => 'required|max:255|unique:eps,eps_nombre,$this->route("eps"),eps_consecutivo,deleted_at,NULL'  
     ];
 
     /**

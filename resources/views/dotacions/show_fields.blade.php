@@ -1,36 +1,24 @@
-<!-- Dot Consecutivo Field -->
-<tr>
-    <th scope="row">{!! Form::label('dot_consecutivo', 'Dot Consecutivo:') !!}</th>
-    <td>{!! $dotacion->dot_consecutivo !!}</td>
-</tr>
+<div class="col-sm-12 table-responsive">
 
-<!-- Dot Detalle Field -->
-<tr>
-    <th scope="row">{!! Form::label('dot_detalle', 'Dot Detalle:') !!}</th>
-    <td>{!! $dotacion->dot_detalle !!}</td>
-</tr>
+    <table class="table table-striped table-bordered zero-configuration dataTable" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
 
-<!-- Dot Valorperdidadano Field -->
-<tr>
-    <th scope="row">{!! Form::label('dot_valorperdidadano', 'Dot Valorperdidadano:') !!}</th>
-    <td>{!! $dotacion->dot_valorperdidadano !!}</td>
-</tr>
-
-<!-- Created At Field -->
-<tr>
-    <th scope="row">{!! Form::label('created_at', 'Created At:') !!}</th>
-    <td>{!! $dotacion->created_at !!}</td>
-</tr>
-
-<!-- Updated At Field -->
-<tr>
-    <th scope="row">{!! Form::label('updated_at', 'Updated At:') !!}</th>
-    <td>{!! $dotacion->updated_at !!}</td>
-</tr>
-
-<!-- Deleted At Field -->
-<tr>
-    <th scope="row">{!! Form::label('deleted_at', 'Deleted At:') !!}</th>
-    <td>{!! $dotacion->deleted_at !!}</td>
-</tr>
-
+      <thead>
+        <tr role="row">
+          <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Name: activate to sort column descending" style="width: 15%;" aria-sort="ascending">Identificador</th>
+          <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 25%;">Detalle</th>
+          <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 20%;">Valor perdida o daño</th>
+          <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 20%;">Fecha creación</th>
+          <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 20%;">Última actualización</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="border-bottom-info border-custom-color">
+          <td>{!! $dotacion->dot_consecutivo !!}</td>
+          <td>{!! $dotacion->dot_detalle !!}</td>
+          <td>{!! $dotacion->dot_valorperdidadano !!}</td>
+          <td>{!! $dotacion->created_at !!}</td>
+          <td>{!! $dotacion->updated_at !!}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>

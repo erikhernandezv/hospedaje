@@ -5,7 +5,7 @@ Eps
 @endsection
 
 @section('titulosecundario')
-Crear Eps
+Nuevas Eps
 @endsection
 
 @section('content')

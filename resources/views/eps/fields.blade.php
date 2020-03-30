@@ -1,9 +1,10 @@
-<div class="row">
+<div class="form-group row">
 	<!-- Eps Nombre Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('eps_nombre', 'Eps Nombre:') !!}
-    {!! Form::text('eps_nombre', null, ['class' => 'form-control']) !!}
-</div>
+	<label for="eps_nombre" class="col-md-3 col-form-label text-md-right">{{ __('Nombre Eps') }}</label>
+
+	<div class="form-group col-sm-8">
+		{!! Form::text('eps_nombre', null, ['class' => 'form-control']) !!}
+	</div>
 </div>
 
 <div class="row">

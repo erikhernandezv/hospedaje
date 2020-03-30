@@ -27,4 +27,33 @@ class UpdatedotacionRequest extends FormRequest
     {
         return dotacion::$rules;
     }
+
+    /**
+     * Cambia el nombre de los campos de la BD
+     *
+     * @return array
+     */
+    public function attributes()
+    {
+        return [
+            "dot_detalle" => "Detalle de la dotación",
+            "dot_valorperdidadano" => "Valor por perdida o daño"
+        ];
+    }
+
+    /**
+     * Convierte los valores de los inputs en mayusculas
+     *
+     * @return array
+     */
+    public function all($keys = null) {
+        $attributes = parent::all();
+        $attributes = array_map(function($item) {
+            if(!is_array($item)){
+                return strtoupper($item);
+            }
+        }, $attributes);
+        return $attributes;
+    }
+
 }

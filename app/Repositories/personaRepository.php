@@ -39,6 +39,24 @@ class personaRepository extends BaseRepository
     }
 
     /**
+     * Search el modelo
+     **/
+    public function search($input)
+    {
+        $query = Persona::select("*");
+
+        if (isset($input['_consecutivo']) && $input['_consecutivo'] != '') {
+            $query->where('_consecutivo', '=', trim($input['_consecutivo']));
+        }
+
+        if (isset($input['_descripcion']) && $input['_descripcion'] != '') {
+            $query->where('_descripcion', "ILIKE", "%" . trim($input['_descripcion']) . "%");
+        }
+
+        return $query;
+    }
+
+    /**
      * Configure the Model
      **/
     public function model()

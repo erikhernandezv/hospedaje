@@ -5,7 +5,7 @@ Eps
 @endsection
 
 @section('titulosecundario')
-Crear Eps
+Nuevas Eps
 @endsection
 
 @section('content')
@@ -17,26 +17,4 @@ Crear Eps
 
     {!! Form::close() !!}
 
-
-    <!--<section class="content-header">
-        <h1>
-            Eps
-        </h1>
-    </section>
-    <div class="content">
-        @include('adminlte-templates::common.errors')
-        
-        <div class="box box-primary">
-
-            <div class="box-body">
-                <div class="row">
-                    {!! Form::open(['route' => 'eps.store']) !!}
-
-                        @include('eps.fields')
-
-                    {!! Form::close() !!}
-                </div>
-            </div>
-        </div>
-    </div>-->
 @endsection

@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('titulopanelprincipal')
-Dotacion
+Dotaciones
 @endsection
 
 @section('titulosecundario')
-Crear Dotacion
+Nuevas Dotaciones
 @endsection
 
 @section('content')
