@@ -1,0 +1,100 @@
+[
+    {
+        "name": "dot_consecutivo",
+        "dbType": "integer,true",
+        "htmlType": null,
+        "validations": "required",
+        "searchable": false,
+        "fillable": false,
+        "primary": true,
+        "inForm": false,
+        "inIndex": false
+    },
+    {
+        "name": "dot_detalle",
+        "dbType": "string",
+        "htmlType": "text",
+        "validations": "required",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true
+    },
+    {
+        "name": "dot_valorperdidadano",
+        "dbType": "decimal,10,0",
+        "htmlType": null,
+        "validations": "required",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true
+    },
+    {
+        "name": "created_at",
+        "dbType": "time",
+        "htmlType": "text",
+        "validations": "required",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false
+    },
+    {
+        "name": "updated_at",
+        "dbType": "time",
+        "htmlType": "text",
+        "validations": "required",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false
+    },
+    {
+        "name": "deleted_at",
+        "dbType": "time",
+        "htmlType": "text",
+        "validations": null,
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,,tiqueteintermunicipal"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,,cajamenor"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,,ingresos_servicio"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,,alimentacion"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,,ingresos"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,Ingreso,dotacion_hospedaje"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,,permission_role"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,,role_user"
+    }
+]
