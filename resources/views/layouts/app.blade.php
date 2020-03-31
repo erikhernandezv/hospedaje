@@ -224,13 +224,13 @@
                 <li class=" nav-item"><a href="#"><i class="la la-columns"></i><span class="menu-title" data-i18n="nav.page_layouts.main">Equipos</span></a>
                     <ul class="menu-content">
                         @if(auth()->user()->can('usuarios_create') || auth()->user()->hasRole(config('seguridad.rol_admin')))
-                            <li><a class="menu-item" href="{{ route('register') }}" data-i18n="nav.page_layouts.1_column">Ingresar</a>
+                            <li><a class="menu-item" href="{{ route('equipos.create') }}" data-i18n="nav.page_layouts.1_column">Ingresar</a>
                             </li>
                         @endif
                     </ul>
                     <ul class="menu-content">
                         @if(auth()->user()->can('usuarios_create') || auth()->user()->hasRole(config('seguridad.rol_admin')))
-                            <li><a class="menu-item" href="{{ route('register') }}" data-i18n="nav.page_layouts.1_column">Consultar</a>
+                            <li><a class="menu-item" href="{{ route('equipos.index') }}" data-i18n="nav.page_layouts.1_column">Consultar</a>
                             </li>
                         @endif
                     </ul>

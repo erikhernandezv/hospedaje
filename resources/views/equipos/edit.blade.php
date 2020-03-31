@@ -5,7 +5,7 @@ Equipos
 @endsection
 
 @section('titulosecundario')
-Crear Equipos
+Nuevos Equipos
 @endsection
 
 @section('content')

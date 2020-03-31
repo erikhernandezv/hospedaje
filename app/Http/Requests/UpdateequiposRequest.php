@@ -19,6 +19,19 @@ class UpdateequiposRequest extends FormRequest
     }
 
     /**
+     * Cambia el nombre de los campos de la BD
+     *
+     * @return array
+     */
+    public function attributes()
+    {
+        return [
+            "equ_nombre" => "Nombre del equipo",
+            'equ_descripcion' => 'Descripcion del equipo'
+        ];
+    }
+
+    /**
      * Get the validation rules that apply to the request.
      *
      * @return array

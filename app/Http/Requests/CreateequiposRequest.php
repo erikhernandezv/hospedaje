@@ -26,7 +26,8 @@ class CreateequiposRequest extends FormRequest
     public function attributes()
     {
         return [
-            "equ_nombre" => "Nombre del equipo"
+            "equ_nombre" => "Nombre del equipo",
+            'equ_descripcion' => 'Descripcion del equipo'
         ];
     }
 
@@ -38,7 +39,8 @@ class CreateequiposRequest extends FormRequest
     public function rules()
     {
         return [
-            'equ_nombre' => 'required'
+            'equ_nombre' => 'required|string|max:200|unique:equipos,equ_nombre,NULL,equ_consecutivo,deleted_at,NULL', 
+            'equ_descripcion' => 'string|max:1000'
         ];
     }
 

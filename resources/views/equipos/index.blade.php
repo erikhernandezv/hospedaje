@@ -5,7 +5,7 @@ Equipos
 @endsection
 
 @section('titulosecundario')
-Equipos
+Nuevos Equipos
 @endsection
 
 @section('add')
