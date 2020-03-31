@@ -58,7 +58,7 @@ class equiposController extends AppBaseController
 
         $equipos = $this->equiposRepository->create($input);
 
-        Flash::success('Equipos saved successfully.');
+        Flash::success('Datos para equipos almacenados correctamente.');
 
         return redirect(route('equipos.index'));
     }
@@ -75,7 +75,7 @@ class equiposController extends AppBaseController
         $equipos = $this->equiposRepository->find($id);
 
         if (empty($equipos)) {
-            Flash::error('Equipos not found');
+            Flash::error('Datos para el equipo no encontrados');
 
             return redirect(route('equipos.index'));
         }
@@ -95,7 +95,7 @@ class equiposController extends AppBaseController
         $equipos = $this->equiposRepository->find($id);
 
         if (empty($equipos)) {
-            Flash::error('Equipos not found');
+            Flash::error('Datos para el equipo no encontrados');
 
             return redirect(route('equipos.index'));
         }
@@ -116,14 +116,14 @@ class equiposController extends AppBaseController
         $equipos = $this->equiposRepository->find($id);
 
         if (empty($equipos)) {
-            Flash::error('Equipos not found');
+            Flash::error('Datos para el equipo no encontrados');
 
             return redirect(route('equipos.index'));
         }
 
         $equipos = $this->equiposRepository->update($request->all(), $id);
 
-        Flash::success('Equipos updated successfully.');
+        Flash::success('Datos de equipos actualizados correctamente');
 
         return redirect(route('equipos.index'));
     }
@@ -142,14 +142,14 @@ class equiposController extends AppBaseController
         $equipos = $this->equiposRepository->find($id);
 
         if (empty($equipos)) {
-            Flash::error('Equipos not found');
+            Flash::error('Datos para el equipo no encontrados');
 
             return redirect(route('equipos.index'));
         }
 
         $this->equiposRepository->delete($id);
 
-        Flash::success('Equipos deleted successfully.');
+        Flash::success('Se eliminaron los datos para el equipo correctamente');
 
         return redirect(route('equipos.index'));
     }

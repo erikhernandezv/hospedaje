@@ -58,10 +58,10 @@ class equipos extends Model
      * @var array
      */
     public static $rules = [
-        'equ_consecutivo' => 'required',
+        /*'equ_consecutivo' => 'required',
         'equ_nombre' => 'required',
         'created_at' => 'required',
-        'updated_at' => 'required'
+        'updated_at' => 'required'*/
     ];
 
     /**

@@ -7,8 +7,12 @@ use App\Models\dotacion;
 
 class CreatedotacionRequest extends FormRequest
 {
-    $id = $this->route("dotacion");
+    private $id;
 
+    public function __construct()
+    {
+        $id = $this->route("dotacion");
+    }
     /**
      * Determine if the user is authorized to make this request.
      *

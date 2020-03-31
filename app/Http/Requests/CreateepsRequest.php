@@ -7,7 +7,12 @@ use App\Models\eps;
 
 class CreateepsRequest extends FormRequest
 {
-    $id = $this->route("eps");
+    private $id;
+
+    public function __construct()
+    {
+        $id = $this->route("eps");
+    }
 
     /**
      * Determine if the user is authorized to make this request.
@@ -39,7 +44,7 @@ class CreateepsRequest extends FormRequest
     public function rules()
     {
         return [
-            'eps_nombre' => 'required|max:255|unique:eps,eps_nombre,{$id},eps_consecutivo,deleted_at,NULL'
+            'eps_nombre' => 'required|max:255|unique:eps,eps_nombre,NULL,eps_consecutivo,deleted_at,NULL'
         ];
     }
 
