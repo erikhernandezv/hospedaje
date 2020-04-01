@@ -19,13 +19,29 @@ class CreateservicioRequest extends FormRequest
     }
 
     /**
+     * Cambia el nombre de los campos de la BD
+     *
+     * @return array
+     */
+    public function attributes()
+    {
+        return [
+            "ser_nombre" => "Nombre del servicio",
+            "ser_valunitario" => "Valor unitario del servicio"
+        ];
+    }
+
+    /**
      * Get the validation rules that apply to the request.
      *
      * @return array
      */
     public function rules()
     {
-        return servicio::$rules;
+        return [
+            'ser_nombre' => 'required|string|max:250|unique:servicio,ser_nombre,NULL,ser_consecutivo,deleted_at,NULL',
+            'ser_valunitario' => 'required|numeric'
+        ];
     }
 
     /**

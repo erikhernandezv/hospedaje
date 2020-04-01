@@ -70,14 +70,14 @@ class persona extends Model
      * @var array
      */
     public static $rules = [
-        'per_consecutivo' => 'required',
+        /*'per_consecutivo' => 'required',
         'per_nombre1' => 'required',
         'per_apellido1' => 'required',
         'per_tipdoc' => 'required',
         'per_numdoc' => 'required',
         'per_idmunicipio' => 'required',
         'created_at' => 'required',
-        'updated_at' => 'required'
+        'updated_at' => 'required'*/
     ];
 
     /**

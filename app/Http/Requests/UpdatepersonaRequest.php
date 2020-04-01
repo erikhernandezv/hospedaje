@@ -19,6 +19,26 @@ class UpdatepersonaRequest extends FormRequest
     }
 
     /**
+     * Cambia el nombre de los campos de la BD
+     *
+     * @return array
+     */
+    public function attributes()
+    {
+        return [
+            "per_nombre1" => "Primer nombre",
+            'per_nombre2' => "Segundo nombre",
+            'per_apellido1' => "Primer Apellido",
+            'per_apellido2' => "Segundo apellido",
+            'per_tipdoc' => "Tipo de documento",
+            'per_numdoc' => "Numero de documento",
+            'per_direccion' => "Dirección",
+            'per_telefono' => "Teléfono",
+            'per_idmunicipio' => "Municipio"
+        ];
+    }
+
+    /**
      * Get the validation rules that apply to the request.
      *
      * @return array

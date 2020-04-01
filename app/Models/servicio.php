@@ -57,11 +57,11 @@ class servicio extends Model
      * @var array
      */
     public static $rules = [
-        'ser_consecutivo' => 'required',
+        /*'ser_consecutivo' => 'required',
         'ser_nombre' => 'required',
         'ser_valunitario' => 'required',
         'created_at' => 'required',
-        'updated_at' => 'required'
+        'updated_at' => 'required'*/
     ];
 
     /**

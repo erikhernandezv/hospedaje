@@ -11,14 +11,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @version March 27, 2020, 9:36 pm UTC
  *
  * @property \Illuminate\Database\Eloquent\Collection vrevehiculos
- * @property \Illuminate\Database\Eloquent\Collection 
- * @property \Illuminate\Database\Eloquent\Collection 
- * @property \Illuminate\Database\Eloquent\Collection 
- * @property \Illuminate\Database\Eloquent\Collection 
- * @property \Illuminate\Database\Eloquent\Collection 
- * @property \Illuminate\Database\Eloquent\Collection 
- * @property \Illuminate\Database\Eloquent\Collection 
- * @property \Illuminate\Database\Eloquent\Collection 
  * @property string vei_marca
  * @property string vei_modelo
  * @property string vei_placa
@@ -73,7 +65,7 @@ class vehiculos extends Model
      * @var array
      */
     public static $rules = [
-        'vei_consecutivo' => 'required',
+        /*'vei_consecutivo' => 'required',
         'vei_marca' => 'required',
         'vei_modelo' => 'required',
         'vei_placa' => 'required',
@@ -82,7 +74,7 @@ class vehiculos extends Model
         'vei_feclimitesoat' => 'required',
         'vei_feclimitetecnomecanica' => 'required',
         'created_at' => 'required',
-        'updated_at' => 'required'
+        'updated_at' => 'required'*/
     ];
 
     /**

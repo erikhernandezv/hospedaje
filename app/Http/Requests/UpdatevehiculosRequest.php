@@ -19,6 +19,19 @@ class UpdatevehiculosRequest extends FormRequest
     }
 
     /**
+     * Cambia el nombre de los campos de la BD
+     *
+     * @return array
+     */
+    public function attributes()
+    {
+        return [
+            "ser_nombre" => "Nombre del servicio",
+            "ser_valunitario" => "Valor unitario del servicio"
+        ];
+    }
+
+    /**
      * Get the validation rules that apply to the request.
      *
      * @return array

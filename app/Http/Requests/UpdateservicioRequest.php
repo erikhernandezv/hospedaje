@@ -19,6 +19,24 @@ class UpdateservicioRequest extends FormRequest
     }
 
     /**
+     * Cambia el nombre de los campos de la BD
+     *
+     * @return array
+     */
+    public function attributes()
+    {
+        return [
+            'vei_marca' => 'Marca del vehiculo',
+            'vei_modelo' => 'Modelo del vehiculo',
+            'vei_placa' => 'Placa del vehiculo',
+            'vei_numerochasis' => 'Numero de chasis',
+            'vei_fecpoliza' => 'Fecha de poliza',
+            'vei_feclimitesoat' => 'Fecha limite soat',
+            'vei_feclimitetecnomecanica' => 'Fecha limite tecnomecanica'
+        ];
+    }
+
+    /**
      * Get the validation rules that apply to the request.
      *
      * @return array
