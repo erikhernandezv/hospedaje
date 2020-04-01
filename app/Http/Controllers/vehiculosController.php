@@ -58,7 +58,7 @@ class vehiculosController extends AppBaseController
 
         $vehiculos = $this->vehiculosRepository->create($input);
 
-        Flash::success('Vehiculos saved successfully.');
+        Flash::success('Datos del vehiculo almacenados correctamente');
 
         return redirect(route('vehiculos.index'));
     }
@@ -75,7 +75,7 @@ class vehiculosController extends AppBaseController
         $vehiculos = $this->vehiculosRepository->find($id);
 
         if (empty($vehiculos)) {
-            Flash::error('Vehiculos not found');
+            Flash::error('Datos para el vehiculo no encontrado');
 
             return redirect(route('vehiculos.index'));
         }
@@ -95,7 +95,7 @@ class vehiculosController extends AppBaseController
         $vehiculos = $this->vehiculosRepository->find($id);
 
         if (empty($vehiculos)) {
-            Flash::error('Vehiculos not found');
+            Flash::error('Datos para el vehiculo no encontrado');
 
             return redirect(route('vehiculos.index'));
         }
@@ -116,14 +116,14 @@ class vehiculosController extends AppBaseController
         $vehiculos = $this->vehiculosRepository->find($id);
 
         if (empty($vehiculos)) {
-            Flash::error('Vehiculos not found');
+            Flash::error('Datos para el vehiculo no encontrado');
 
             return redirect(route('vehiculos.index'));
         }
 
         $vehiculos = $this->vehiculosRepository->update($request->all(), $id);
 
-        Flash::success('Vehiculos updated successfully.');
+        Flash::success('Datos actualizados correctamente para el vehiculo.');
 
         return redirect(route('vehiculos.index'));
     }
@@ -142,14 +142,14 @@ class vehiculosController extends AppBaseController
         $vehiculos = $this->vehiculosRepository->find($id);
 
         if (empty($vehiculos)) {
-            Flash::error('Vehiculos not found');
+            Flash::error('Datos para el vehiculo no encontrado');
 
             return redirect(route('vehiculos.index'));
         }
 
         $this->vehiculosRepository->delete($id);
 
-        Flash::success('Vehiculos deleted successfully.');
+        Flash::success('Datos del vehiculo eliminados correctamente.');
 
         return redirect(route('vehiculos.index'));
     }

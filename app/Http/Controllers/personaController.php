@@ -58,7 +58,7 @@ class personaController extends AppBaseController
 
         $persona = $this->personaRepository->create($input);
 
-        Flash::success('Persona saved successfully.');
+        Flash::success('Datos de la persona almacenados correctamente');
 
         return redirect(route('personas.index'));
     }
@@ -75,7 +75,7 @@ class personaController extends AppBaseController
         $persona = $this->personaRepository->find($id);
 
         if (empty($persona)) {
-            Flash::error('Persona not found');
+            Flash::error('Datos para la persona no encontrados');
 
             return redirect(route('personas.index'));
         }
@@ -95,7 +95,7 @@ class personaController extends AppBaseController
         $persona = $this->personaRepository->find($id);
 
         if (empty($persona)) {
-            Flash::error('Persona not found');
+            Flash::error('Datos para la persona no encontrados');
 
             return redirect(route('personas.index'));
         }
@@ -116,14 +116,14 @@ class personaController extends AppBaseController
         $persona = $this->personaRepository->find($id);
 
         if (empty($persona)) {
-            Flash::error('Persona not found');
+            Flash::error('Datos para la persona no encontrados');
 
             return redirect(route('personas.index'));
         }
 
         $persona = $this->personaRepository->update($request->all(), $id);
 
-        Flash::success('Persona updated successfully.');
+        Flash::success('Datos actualizados correctamente para la persona.');
 
         return redirect(route('personas.index'));
     }
@@ -142,14 +142,14 @@ class personaController extends AppBaseController
         $persona = $this->personaRepository->find($id);
 
         if (empty($persona)) {
-            Flash::error('Persona not found');
+            Flash::error('Datos para la persona no encontrados');
 
             return redirect(route('personas.index'));
         }
 
         $this->personaRepository->delete($id);
 
-        Flash::success('Persona deleted successfully.');
+        Flash::success('Datos de la persona eliminados correctamente.');
 
         return redirect(route('personas.index'));
     }

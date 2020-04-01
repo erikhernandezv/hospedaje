@@ -19,6 +19,18 @@ class CreatepersonaRequest extends FormRequest
     }
 
     /**
+     * Cambia el nombre de los campos de la BD
+     *
+     * @return array
+     */
+    public function attributes()
+    {
+        return [
+            "eps_nombre" => "Nombre de la Eps"
+        ];
+    }
+    
+    /**
      * Get the validation rules that apply to the request.
      *
      * @return array
