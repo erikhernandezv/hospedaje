@@ -53,6 +53,12 @@
             </div>
             <div class="navbar-container content">
                 <div class="collapse navbar-collapse" id="navbar-mobile">
+                <!-------------------------------------------->
+                <!-------------------------------------------->
+                <ul class="nav navbar-nav mr-auto float-left">
+                </ul>
+                <!-------------------------------------------->
+                <!-------------------------------------------->
                     <ul class="nav navbar-nav float-right">
                         <li class="dropdown dropdown-user nav-item">
                             <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
@@ -238,13 +244,13 @@
                 <li class=" nav-item"><a href="#"><i class="la la-columns"></i><span class="menu-title" data-i18n="nav.page_layouts.main">Personas</span></a>
                     <ul class="menu-content">
                         @if(auth()->user()->can('usuarios_create') || auth()->user()->hasRole(config('seguridad.rol_admin')))
-                            <li><a class="menu-item" href="{{ route('register') }}" data-i18n="nav.page_layouts.1_column">Ingresar</a>
+                            <li><a class="menu-item" href="{{ route('personas.create') }}" data-i18n="nav.page_layouts.1_column">Ingresar</a>
                             </li>
                         @endif
                     </ul>
                     <ul class="menu-content">
                         @if(auth()->user()->can('usuarios_create') || auth()->user()->hasRole(config('seguridad.rol_admin')))
-                            <li><a class="menu-item" href="{{ route('register') }}" data-i18n="nav.page_layouts.1_column">Consultar</a>
+                            <li><a class="menu-item" href="{{ route('personas.index') }}" data-i18n="nav.page_layouts.1_column">Consultar</a>
                             </li>
                         @endif
                     </ul>
@@ -252,13 +258,13 @@
                 <li class=" nav-item"><a href="#"><i class="la la-columns"></i><span class="menu-title" data-i18n="nav.page_layouts.main">Servicios</span></a>
                     <ul class="menu-content">
                         @if(auth()->user()->can('usuarios_create') || auth()->user()->hasRole(config('seguridad.rol_admin')))
-                            <li><a class="menu-item" href="{{ route('register') }}" data-i18n="nav.page_layouts.1_column">Ingresar</a>
+                            <li><a class="menu-item" href="{{ route('servicios.create') }}" data-i18n="nav.page_layouts.1_column">Ingresar</a>
                             </li>
                         @endif
                     </ul>
                     <ul class="menu-content">
                         @if(auth()->user()->can('usuarios_create') || auth()->user()->hasRole(config('seguridad.rol_admin')))
-                            <li><a class="menu-item" href="{{ route('register') }}" data-i18n="nav.page_layouts.1_column">Consultar</a>
+                            <li><a class="menu-item" href="{{ route('servicios.index') }}" data-i18n="nav.page_layouts.1_column">Consultar</a>
                             </li>
                         @endif
                     </ul>
@@ -266,13 +272,13 @@
                 <li class=" nav-item"><a href="#"><i class="la la-columns"></i><span class="menu-title" data-i18n="nav.page_layouts.main">Vehiculos</span></a>
                     <ul class="menu-content">
                         @if(auth()->user()->can('usuarios_create') || auth()->user()->hasRole(config('seguridad.rol_admin')))
-                            <li><a class="menu-item" href="{{ route('register') }}" data-i18n="nav.page_layouts.1_column">Ingresar</a>
+                            <li><a class="menu-item" href="{{ route('vehiculos.create') }}" data-i18n="nav.page_layouts.1_column">Ingresar</a>
                             </li>
                         @endif
                     </ul>
                     <ul class="menu-content">
                         @if(auth()->user()->can('usuarios_create') || auth()->user()->hasRole(config('seguridad.rol_admin')))
-                            <li><a class="menu-item" href="{{ route('register') }}" data-i18n="nav.page_layouts.1_column">Consultar</a>
+                            <li><a class="menu-item" href="{{ route('vehiculos.index') }}" data-i18n="nav.page_layouts.1_column">Consultar</a>
                             </li>
                         @endif
                     </ul>

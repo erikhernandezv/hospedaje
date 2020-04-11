@@ -9,11 +9,7 @@ Datos de Vehiculos
 @endsection
 
 @section('content')
-    <div class="table-responsive">
-        <table class="table">
-            @include('roles.show_fields')
-        </table>
-    </div>
+    @include('vehiculos.show_fields')
     
     <div class="form-group row mb-0">
       <div class="col-md-12 text-right">
@@ -27,20 +23,3 @@ Datos de Vehiculos
 
 @section('scripts')
 @endsection
-
-   <!-- <section class="content-header">
-        <h1>
-            Vehiculos
-        </h1>
-    </section>
-    <div class="content">
-        <div class="box box-primary">
-            <div class="box-body">
-                <div class="row" style="padding-left: 20px">
-                    @include('vehiculos.show_fields')
-                    <a href="{!! route('vehiculos.index') !!}" class="btn btn-default">Back</a>
-                </div>
-            </div>
-        </div>
-    </div>-->
-

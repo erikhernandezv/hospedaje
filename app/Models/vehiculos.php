@@ -84,4 +84,9 @@ class vehiculos extends Model
     {
         return $this->hasMany(\App\Models\VehiculosRevision::class, 'vre_idvehiculo');
     }
+
+    public function getDateFormat()
+    {
+        return 'Y-m-d H:i:s.u';
+    }
 }

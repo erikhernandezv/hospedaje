@@ -57,7 +57,7 @@ class persona extends Model
         'per_nombre2' => 'string',
         'per_apellido1' => 'string',
         'per_apellido2' => 'string',
-        'per_tipdoc' => 'integer',
+        'per_tipdoc' => 'string',
         'per_numdoc' => 'string',
         'per_direccion' => 'string',
         'per_telefono' => 'string',
@@ -69,23 +69,14 @@ class persona extends Model
      *
      * @var array
      */
-    public static $rules = [
-        /*'per_consecutivo' => 'required',
-        'per_nombre1' => 'required',
-        'per_apellido1' => 'required',
-        'per_tipdoc' => 'required',
-        'per_numdoc' => 'required',
-        'per_idmunicipio' => 'required',
-        'created_at' => 'required',
-        'updated_at' => 'required'*/
-    ];
+    public static $rules = [];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      **/
-    public function permunicipio()
+    public function municipios()
     {
-        return $this->belongsTo(\App\Models\Municipio::class, 'per_idmunicipio');
+        return $this->belongsTo(\App\Models\municipio::class, 'per_idmunicipio');
     }
 
     /**
@@ -107,7 +98,7 @@ class persona extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      **/
-    public function municipios()
+    public function cajamenor()
     {
         return $this->belongsToMany(\App\Models\Municipio::class, 'cajamenor');
     }

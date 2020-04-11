@@ -1,66 +1,37 @@
-<!-- Vei Consecutivo Field -->
-<tr>
-    <th scope="row">{!! Form::label('vei_consecutivo', 'Vei Consecutivo:') !!}</th>
-    <td>{!! $vehiculos->vei_consecutivo !!}</td>
-</tr>
+<div class="col-sm-12 table-responsive">
 
-<!-- Vei Marca Field -->
-<tr>
-    <th scope="row">{!! Form::label('vei_marca', 'Vei Marca:') !!}</th>
-    <td>{!! $vehiculos->vei_marca !!}</td>
-</tr>
+    <table class="table table-striped table-bordered zero-configuration dataTable" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
 
-<!-- Vei Modelo Field -->
-<tr>
-    <th scope="row">{!! Form::label('vei_modelo', 'Vei Modelo:') !!}</th>
-    <td>{!! $vehiculos->vei_modelo !!}</td>
-</tr>
+      <thead>
+        <tr role="row">
+        <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Name: activate to sort column descending" style="width: 8%;" aria-sort="ascending">Identificador</th>
+          <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 50%;">Marca</th>
+          <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 25%;">Modelo</th>
 
-<!-- Vei Placa Field -->
-<tr>
-    <th scope="row">{!! Form::label('vei_placa', 'Vei Placa:') !!}</th>
-    <td>{!! $vehiculos->vei_placa !!}</td>
-</tr>
+          <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 50%;">Placa</th>
+          <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 25%;">Número chasis</th>
+          <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 50%;">Fecha poliza</th>
+          <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 25%;">Fecha limite soat</th>
+          <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 50%;">Fecha limite tecno-mecánica</th>
 
-<!-- Vei Numerochasis Field -->
-<tr>
-    <th scope="row">{!! Form::label('vei_numerochasis', 'Vei Numerochasis:') !!}</th>
-    <td>{!! $vehiculos->vei_numerochasis !!}</td>
-</tr>
+          <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 22%;">Fecha creación</th>
+          <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 16%;">Última actualización</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="border-bottom-info border-custom-color">
+            <td>{!! $vehiculos->vei_consecutivo !!}</td>
+            <td>{!! $vehiculos->vei_marca !!}</td>
+            <td>{!! $vehiculos->vei_modelo !!}</td>
+            <td>{!! $vehiculos->vei_placa !!}</td>
+            <td>{!! $vehiculos->vei_numerochasis !!}</td>
+            <td>{!! $vehiculos->vei_fecpoliza !!}</td>
+            <td>{!! $vehiculos->vei_feclimitesoat !!}</td>
+            <td>{!! $vehiculos->vei_feclimitetecnomecanica !!}</td>
 
-<!-- Vei Fecpoliza Field -->
-<tr>
-    <th scope="row">{!! Form::label('vei_fecpoliza', 'Vei Fecpoliza:') !!}</th>
-    <td>{!! $vehiculos->vei_fecpoliza !!}</td>
-</tr>
-
-<!-- Vei Feclimitesoat Field -->
-<tr>
-    <th scope="row">{!! Form::label('vei_feclimitesoat', 'Vei Feclimitesoat:') !!}</th>
-    <td>{!! $vehiculos->vei_feclimitesoat !!}</td>
-</tr>
-
-<!-- Vei Feclimitetecnomecanica Field -->
-<tr>
-    <th scope="row">{!! Form::label('vei_feclimitetecnomecanica', 'Vei Feclimitetecnomecanica:') !!}</th>
-    <td>{!! $vehiculos->vei_feclimitetecnomecanica !!}</td>
-</tr>
-
-<!-- Created At Field -->
-<tr>
-    <th scope="row">{!! Form::label('created_at', 'Created At:') !!}</th>
-    <td>{!! $vehiculos->created_at !!}</td>
-</tr>
-
-<!-- Updated At Field -->
-<tr>
-    <th scope="row">{!! Form::label('updated_at', 'Updated At:') !!}</th>
-    <td>{!! $vehiculos->updated_at !!}</td>
-</tr>
-
-<!-- Deleted At Field -->
-<tr>
-    <th scope="row">{!! Form::label('deleted_at', 'Deleted At:') !!}</th>
-    <td>{!! $vehiculos->deleted_at !!}</td>
-</tr>
-
+            <td>{!! $vehiculos->created_at !!}</td>
+            <td>{!! $vehiculos->updated_at !!}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>

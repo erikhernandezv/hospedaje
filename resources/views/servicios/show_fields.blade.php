@@ -1,36 +1,25 @@
-<!-- Ser Consecutivo Field -->
-<tr>
-    <th scope="row">{!! Form::label('ser_consecutivo', 'Ser Consecutivo:') !!}</th>
-    <td>{!! $servicio->ser_consecutivo !!}</td>
-</tr>
+<div class="col-sm-12 table-responsive">
 
-<!-- Ser Nombre Field -->
-<tr>
-    <th scope="row">{!! Form::label('ser_nombre', 'Ser Nombre:') !!}</th>
-    <td>{!! $servicio->ser_nombre !!}</td>
-</tr>
+    <table class="table table-striped table-bordered zero-configuration dataTable" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
 
-<!-- Ser Valunitario Field -->
-<tr>
-    <th scope="row">{!! Form::label('ser_valunitario', 'Ser Valunitario:') !!}</th>
-    <td>{!! $servicio->ser_valunitario !!}</td>
-</tr>
+      <thead>
+        <tr role="row">
+        <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Name: activate to sort column descending" style="width: 8%;" aria-sort="ascending">Identificador</th>
+          <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 50%;">Nombre</th>
+          <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 25%;">Valor Unitario</th>
+          <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 22%;">Fecha creación</th>
+          <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 16%;">Última actualización</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="border-bottom-info border-custom-color">
+        <td>{!! $servicio->ser_consecutivo !!}</td>
+          <td>{!! $servicio->ser_nombre !!}</td>
+          <td>{!! $servicio->ser_valunitario !!}</td>
 
-<!-- Created At Field -->
-<tr>
-    <th scope="row">{!! Form::label('created_at', 'Created At:') !!}</th>
-    <td>{!! $servicio->created_at !!}</td>
-</tr>
-
-<!-- Updated At Field -->
-<tr>
-    <th scope="row">{!! Form::label('updated_at', 'Updated At:') !!}</th>
-    <td>{!! $servicio->updated_at !!}</td>
-</tr>
-
-<!-- Deleted At Field -->
-<tr>
-    <th scope="row">{!! Form::label('deleted_at', 'Deleted At:') !!}</th>
-    <td>{!! $servicio->deleted_at !!}</td>
-</tr>
-
+          <td>{!! $servicio->created_at !!}</td>
+          <td>{!! $servicio->updated_at !!}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
